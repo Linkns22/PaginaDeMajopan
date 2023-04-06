@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MUJER MAS HERMOSA DEL FOKIN WORD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #7fffd4; /* Cambiar el color de fondo a verde aguamarina */
+            color: #000; /* Cambiar el color de texto a negro */
+        }
+
+        h1 {
+            color: #ff6b6b;
+        }
+
+        #galeria {
+            margin-top: 50px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #pregunta {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #opciones {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #opcionSi,
+        #opcionNo {
+            margin: 0 20px;
+            padding: 10px 20px;
+            border: 2px solid #000;
+            cursor: pointer;
+        }
+          body {
+      transition: background-color 0.5s;
+    }
+    #faceText {
+      font-size: 96px; /* Tamaño de la carita feliz/triste */
+      margin-top: 20px;
+    }
+
+    </style>
+    <script>
+        var audioElement = new Audio('y2mate.com - TE AMO PATRICIO.mp3');
+        var isPlaying = false;
+
+        function cambiarImagen() {
+            var imagenes = ['Mejores Amigos.png', 'Mejores amigos2.jpeg', 'Imagen1.jpeg', 'Mejores amigos3.jpeg','Corazón.png'];
+            var index = Math.floor(Math.random() * imagenes.length);
+            var imagen = document.getElementById('galeria').getElementsByTagName('img');
+            imagen[1].src = imagenes[index];
+        }
+
+        
+        function toggleMusica() {
+            if (isPlaying) {
+                audioElement.pause();
+                isPlaying = false;
+            } else {
+                audioElement.play();
+                isPlaying = true;
+            }
+        }
+        function generarPalabraAleatoria() {
+            var palabras = ['TE AMO', 'ESTOY ORGULLOSO DE TI', 'HERMOSA', 'MI PIPI PARA USTED', 'MAJO MI CASITA', 'MAJO MI LUGAR SEGURO', 'PIROBA LA ODIO (SIGNIFICA TE AMO)', 'NO ESTAS SOLA'];
+            var index = Math.floor(Math.random() * palabras.length);
+            var palabraAleatoria = document.getElementById('palabraAleatoria');
+            palabraAleatoria.textContent = palabras[index];
+        }
+
+        function showHappyFace() {
+      var faceText = document.getElementById("faceText");
+      faceText.textContent = "😃"; // Carita feliz Unicode
+    }
+
+    function showSadFace() {
+      var faceText = document.getElementById("faceText");
+      faceText.textContent = "😢"; // Carita triste Unicode
+    }
+    
+    </script>
+</head>
+
+<body>
+    <h1>MUJER MAS HERMOSA DEL FOKIN WORD</h1>
+    <div id="galeria">
+        <img src="Corazón.png" alt="Imagen 1" id="imagen1">
+        <img src="Corazón.png" alt="Imagen 2" id="imagen2">
+        <img src="Corazón.png" alt="Imagen 3" id="imagen3">
+    </div>
+    
+    <button onclick="cambiarImagen()">PRESIONAME SI QUIERES VER A ALGUIEN HERMOSA</button>
+    <button onclick="toggleMusica()">Te amo</button>
+    <button onclick="generarPalabraAleatoria()">Generar Palabra BONITAS</button>
+    <p id="palabraAleatoria"></p>
+
+    <div id="pregunta">
+        <h2>¿Quieres hacer llamadita conmigo?</h2>
+        <button onclick="showHappyFace()">Sí</button>
+         <button onclick="showSadFace()">No</button>
+        <div id="faceText"></div>
+    <audio id="musica" autoplay loop controls>
+        <source src="y2mate.com - El lobo siempre cuida su loba animation.mp3" type="audio/mpeg">
+    </audio>
+  
+</body>
+
+</html>
